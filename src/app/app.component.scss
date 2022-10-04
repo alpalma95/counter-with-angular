@@ -1,0 +1,11 @@
+.app--container {
+  height: 100vh;
+  background-image: linear-gradient(to right, #f05b5b, rgba(#f05b5b, 0.6));
+  padding: 2rem 0;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+  }
+}

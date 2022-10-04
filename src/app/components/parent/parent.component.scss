@@ -1,0 +1,39 @@
+.parent--container {
+  width: 50vw;
+
+  margin: 0 auto;
+  padding: 2rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(75, 75, 243),
+    rgba(blue, 0.5)
+  );
+  border-radius: 5px;
+  box-shadow: 0 20px 50px rgb(83, 77, 77);
+
+  h2 {
+    margin: 2rem 0;
+    text-align: center;
+    color: white;
+  }
+
+  &__p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+
+    .counter {
+      font-weight: 700;
+      font-size: 2rem;
+      text-decoration: underline dashed 1px white;
+
+      &--red {
+        color: red;
+      }
+
+      &--green {
+        color: rgb(176, 202, 176);
+      }
+    }
+  }
+}

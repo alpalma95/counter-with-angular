@@ -1,0 +1,19 @@
+<div class="parent--container">
+  <h2>I'm a parent component!</h2>
+  <p class="parent--container__p">
+    You have clicked the button
+    <span
+      [ngClass]="{
+        counter: true,
+        'counter--red': counter === 0,
+        'counter--green': counter > 0
+      }"
+      >{{ counter }}</span
+    >
+    {{ counter === 1 ? "time" : "times" }}
+  </p>
+  <app-child
+    [counter]="counter"
+    (listenCounter)="increaseCounterParent($event)"
+  ></app-child>
+</div>
