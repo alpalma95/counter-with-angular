@@ -1,6 +1,5 @@
 .child--container {
-  width: 30vw;
-  min-width: 90%;
+  width: min(90%, 25rem);
   background-image: linear-gradient(
     to right,
 

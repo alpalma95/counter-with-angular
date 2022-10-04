@@ -1,6 +1,5 @@
 .parent--container {
-  width: 50vw;
-  min-width: 90%;
+  width: min(90%, 30rem);
 
   margin: 0 auto;
   padding: 2rem;
