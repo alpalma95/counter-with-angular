@@ -1,6 +1,6 @@
 # Counter
 
-You can check the preview [here](https://counter-with-angular.vercel.app/).
+You can check the preview [here](https://counter-with-angular.vercel.app/). If you happen to be here and you don't know anything about Angular, the magic is happening within src/app/.
 
 Full disclosure: this is a dummy project. Yet another counter that increases with a button. **BUT**:
 
