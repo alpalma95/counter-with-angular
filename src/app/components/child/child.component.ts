@@ -7,7 +7,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
   @Input() counter: number = 0;
+  @Input() isVisible: boolean = true;
+
   @Output() listenCounter: EventEmitter<number> = new EventEmitter<number>();
+  @Output() listenIsVisible: EventEmitter<boolean> =
+    new EventEmitter<boolean>();
 
   constructor() {}
 
@@ -16,5 +20,8 @@ export class ChildComponent implements OnInit {
   increaseCounterChild(): void {
     this.counter++;
     this.listenCounter.emit(this.counter);
+  }
+  isVisibleSetter(): void {
+    this.listenIsVisible.emit(!this.isVisible);
   }
 }

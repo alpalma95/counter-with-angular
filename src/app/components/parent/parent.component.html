@@ -1,13 +1,11 @@
 <div class="parent--container">
-  <h2>I'm a parent component!</h2>
+  <h2 [hidden]="!isVisible">I'm a parent component!</h2>
   <p class="parent--container__p">
     You have clicked the button
     <span
-      [ngClass]="{
-        counter: true,
-        'counter--red': counter === 0,
-        'counter--green': counter > 0
-      }"
+      class="counter"
+      [class.counter--red]="counter === 0"
+      [class.counter--green]="counter > 0"
       >{{ counter }}</span
     >
     {{ counter === 1 ? "time" : "times" }}
@@ -15,5 +13,7 @@
   <app-child
     [counter]="counter"
     (listenCounter)="increaseCounterParent($event)"
+    [isVisible]="isVisible"
+    (listenIsVisible)="showElement($event)"
   ></app-child>
 </div>

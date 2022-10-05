@@ -1,6 +1,10 @@
 <div class="child--container">
   <h4>I'm a child component!</h4>
   <button class="btn--counter" (click)="increaseCounterChild()">
-    Click me to increase parent's counter
+    <span *ngIf="counter === 0"> Click me to increase parent's counter </span>
+    <span *ngIf="counter > 0">Awesome, keep going!</span>
+  </button>
+  <button class="btn--counter" (click)="isVisibleSetter()">
+    Toggle parent's title visibility
   </button>
 </div>

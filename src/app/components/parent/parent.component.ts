@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
   counter: number = 0;
+  isVisible: boolean = true;
 
   constructor() {}
 
@@ -14,5 +15,8 @@ export class ParentComponent implements OnInit {
 
   increaseCounterParent(event: number): void {
     this.counter = event;
+  }
+  showElement(event: boolean): void {
+    this.isVisible = !this.isVisible;
   }
 }
